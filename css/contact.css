@@ -1,0 +1,28 @@
+.contact-header {
+  position: relative;
+}
+
+.contact-header-content {
+  z-index: 1000;
+  position: absolute;
+  color: white;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.contact-header-title {
+  font-size: 3.2rem!important;
+}
+
+.contact-content-outer h2 {
+  font-size: 2rem!important;
+}
+
+.contact-content-inner {
+  padding-top: 90px;
+}
+
+.skype img {
+  margin: 0!important;
+  vertical-align: 0!important;
+}
