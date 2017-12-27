@@ -275,6 +275,25 @@ Secondary content Styles
 }
 
 /* --------------------------------------
+Map content Styles
+-------------------------------------- */
+
+.map-outer {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.map-svg {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 300px;
+  width: 100%;
+}
+
+/* --------------------------------------
 Pre-footer content Styles
 -------------------------------------- */
 
