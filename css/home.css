@@ -1,0 +1,17 @@
+.colour-bar {
+  height: 5px;
+  background: linear-gradient(90deg, #253C78, #08A4BD);
+  width: 100%;
+  position: fixed;
+  top: 56px;
+}
+
+.navbar-brand {
+  color: #253C78!important;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.nav-link {
+  color: #08A4BD!important;
+}

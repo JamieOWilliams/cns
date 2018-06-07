@@ -119,11 +119,8 @@
     </div>
 
     <div class="content-wrapper-outer">
-      <!-- <svg class="background-svg svg-behind" height='518px' id="canvas-2" preserveaspectratio="none" viewbox="0 0 100 100" width='100%'>
-          <polygon fill="rgba(240, 240, 240, 1)" fill-opacity="0.3" id="" points="0,0 100,0 100,100 100,10"></polygon>
-      </svg> -->
-      <div class="content-wrapper-inner mt-5">
-        <div class="container mx-80">
+      <div class="content-wrapper-inner py-5 mt-5">
+        <div class="container">
           <div class="row justify-content-md-center">
             <div class="block col-3" id="0">
               <img src="assets/img/card-img-1.png" class="block-img mx-auto d-block">
@@ -153,7 +150,7 @@
         </div>
       </div>
     </div>
-    <div id="carouselHome" class="carousel slide" data-ride="carousel">
+    <div id="carouselHome" class="carousel slide py-5" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
         <li data-target="#carouselHome" data-slide-to="1"></li>
@@ -187,33 +184,28 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <!-- <div class="secondary-content-outer">
-      <div class="secondary-content-inner">
-
-      </div>
-    </div> -->
     <div class="tertiary-content-outer">
 
       <div class="tertiary-content-inner container">
-        <div class="row">
-          <div class="text-block-left col-7">
+        <div class="row justify-content-between">
+          <div class="text-block-left col-6 my-5">
             <h2 class="display-1  mb-4">The BIG Cloud</h2>
             <h3 class="display-1  mt-2 mb-4">What it is and how it can help your business</h3>
             <p class="lead ">The Big Cloud was launched in August 2009 to meet the modern needs of growing firms throughout the UK. Computer Network Services have a long history of providing innovative and cost effective IT solutions within the business sector including web based systems.
                                         <br><br>Historically businesses had to plan their growth accurately and invest in the necessary IT facilities to accommodate this growth. This has always been a little difficult but in the current climate it is proving impossible to predict what is ahead or even to raise the capital for IT infrastructure.</p>
           </div>
-          <img src="assets/img/cloud_user.jpg" class="pl-4 col-5 img-fluid my-auto">
+          <img src="assets/img/cloud_user.jpg" class=" col-5 img-fluid my-auto">
         </div>
       </div>
     </div>
-    <div class="location-home map-outer" style="">
+    <div class="location-home map-outer mt-5" style="">
       <svg class="map-svg" id="" preserveaspectratio="none" viewbox="0 0 100 100">
           <polygon fill="rgb(210,210,210)" fill-opacity="0.8" points="50,0 0,0 0,100 40,100"></polygon>
       </svg>
       <div class="location-home-text" style="position: absolute">
         <h3>We are here blah blah blah</h3>
         <p>CNS provides dedicated 24/7 technical support, ensuring IT problems never hinder your business' operations.
-                                              We can save your business time, money and elimatie downtime.
+           We can save your business time, money and elimatie downtime.
         </p>
       </div>
       <iframe src="assets/map/map.html" width="100%%" height="300px" class="mx-auto d-block" scrolling="no" style="margin-top: 40px" frameBorder="0"></iframe>
@@ -292,7 +284,7 @@
         </div>
       </div>
     </div>
-    <!-- <div class="footer-header">
+    <div class="footer-header">
     <div class="partners-wrapper-footer mt-3 mx-auto">
       <div class="container">
         <div class="row">
@@ -317,36 +309,143 @@
         </div>
       </div>
     </div>
-    </div> -->
+    </div>
     <footer class="main-footer">
-      <svg class="background-svg svg-above" height='60vh' id="canvas-1" preserveaspectratio="none" viewbox="0 0 100 100" width='50%'>
+      <svg class="background-svg svg-above" height='525px' id="canvas-1" preserveaspectratio="none" viewbox="0 0 100 100" width='50%'>
           <polygon fill="rgba(250, 250, 250, 1)" fill-opacity="1" id="poly-1" points="100,0 100,100 35,100 10,0"></polygon>
-          <!-- <polygon fill="#A0ACAD" fill-opacity="0.3" id="poly-2" points="100,100 100,60 80,100"></polygon>
-          <polygon fill="rgba(240, 240, 240, 1)" fill-opacity="0.3" id="poly-3" points="100,100 100,50 90,100"></polygon> -->
       </svg>
       <div class="footer-links container">
         <div class="row justify-content-start">
           <div class="col-1 spacer">
           </div>
           <div class="footer-contact col-3">
+            <?php
+
+            function test_input($data) {
+              $data = trim($data);
+              $data = stripslashes($data);
+              $data = htmlspecialchars($data);
+              return $data;
+            }
+
+            // Define variables
+            $name = $email = $message = "";
+            $nameErr = $emailErr = $messageErr = "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+              // Get info from form
+              if (empty($_POST['name'])) {
+                $nameErr = "Name is required.";
+              } else {
+                $name = test_input($_POST['name']);
+                if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+                  $nameErr = "Only letters and white space allowed.";
+                }
+              }
+
+              if (empty($_POST['email'])) {
+                $emailErr = "Please enter your email so we can get back to you.";
+              } else {
+                $email = test_input($_POST['email']);
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                  $emailErr = "Invalid email format.";
+                }
+              }
+
+              if (empty($_POST['message'])) {
+                $messageErr = "Please enter a short message.";
+              } else {
+                $message = test_input($_POST['message']);
+              }
+
+              // Set content-type headers
+              $headers = "MIME-Version: 1.0" . "\r\n";
+              $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+              // Send email to CNS
+              $email_CNS = "robertw@cnsuk.com";
+              $subject_CNS = "Email from $name";
+              $message_CNS = "
+              <html>
+              <head>
+              <title>Message from cnsuk.com</title>
+              <style>
+                th {
+                  margin-right: 10px;
+                }
+                td {
+                  margin-right: 10px;
+                }
+              </style>
+              </head>
+              <body>
+              <table>
+              <tr>
+              <th>Name</th>
+              <th>Email</th>
+              </tr>
+              <tr>
+              <td>$name</td>
+              <td>$email</td>
+              </tr>
+              </table>
+              <p>This person has submitted the message: '$message'</p>
+              </body>
+              </html>
+              ";
+
+              mail($email_CNS, $subject_CNS, $message_CNS, $headers);
+
+              // Send email to user
+              $subject_user = "Message Confirmation (CNS)";
+              $message_user = "
+              <html>
+              <head>
+              <title>Message Confirmation From CNS</title>
+              </head>
+              <body>
+              <p>Dear $name,</p>
+              <br>
+              <p>Thank you for contacting us. We will get back to you as soon as possible.</p>
+              <br>
+              <p>Warm Regards</p>
+              <br>
+              <p>Computer Network Services</p>
+              </body>
+              </html>
+              ";
+
+              mail($email, $subject_user, $message_user, $headers);
+
+            }
+
+            ?>
             <h2 class="display-1">Contact Us</h2>
-            <form>
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
               <div class="form-group">
                 <label for="exampleFormControlInput1">Name</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="Name">
+                <span class="error"><?php echo $nameErr;?></span>
+                <br>
               </div>
               <div class="form-group">
                 <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+                <span class="error"><?php echo $emailErr;?></span>
+                <br>
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <span class="error"><?php echo $messageErr;?></span>
+                <br>
               </div>
+              <input type="submit" value="Submit" class="btn btn-light btn-submit">
             </form>
+
           </div>
-          <!-- <div class="col-1 spacer">
-          </div> -->
           <div class="footer-links col-2 pt-0 pl-5">
             <h2 class="display-1">Useful links</h2>
             <ul class="nav flex-column">
@@ -371,23 +470,22 @@
           </div>
           <div class="col-4 tvd">
             <h2 class="display-1"><span><img src="assets/support/teamviewer/logo/logo-sm.png" width="60px;" class="img-fluid mr-3"></span>Download Teamviewer 12</h2>
-            <!-- <img src="assets/support/teamviewer/logo/logo-sm.png" class="img-fluid"> -->
             <div class="download pt-4 my-2">
-              <a class="lead" href="https://www.teamviewer.com/en/download/windows/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for Windows</h3>
+              <a class="lead" href="https://www.teamviewer.com/en/download/windows/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for Windows</h3></a>
             </div>
             <div class="download">
-              <a class="lead" href="https://www.teamviewer.com/en/download/mac/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for MacOS</h3>
+              <a class="lead" href="https://www.teamviewer.com/en/download/mac/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for MacOS</h3></a>
             </div>
             <div class="download my-2">
-              <a class="lead" href="https://www.teamviewer.com/en/download/linux/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for Linux</h3>
+              <a class="lead" href="https://www.teamviewer.com/en/download/linux/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for Linux</h3></a>
             </div>
             <div class="download">
-              <a class="lead" href="https://www.teamviewer.com/en/download/chrome-os/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for ChromeOS</h3>
+              <a class="lead" href="https://www.teamviewer.com/en/download/chrome-os/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for ChromeOS</h3></a>
             </div>
-            <!-- <h4 class="lead mt-5">We can provide remote support using Teamviewer 12</h4> -->
           </div>
         </div>
-      <p class="lead copy-right-text text-center">&copy; Computer Network Services 2017</p>
+        <p class="lead copy-right-text text-center">&copy; Computer Network Services 2017</p>
+      </div>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

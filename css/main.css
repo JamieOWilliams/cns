@@ -8,6 +8,10 @@
 Header Styles
 -------------------------------------- */
 
+.navbar {
+  box-shadow: 0px 0.1px 10px rgba(0,0,0,0.5);
+}
+
 .main-header-outer {
   height: 50vh;
   margin-top: 70px;
@@ -47,35 +51,6 @@ Header Styles
   top: 190px;
   left: 40px;
   position: absolute;
-}
-
-.secondNav {
-  position: absolute;
-  width: 30%!important;
-  top: 100px;
-  right: 70px;
-}
-
-.secondNav .col-2 {
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 20px;
-  padding: 10px;
-  padding-bottom: 0px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  transition: all 0.3s;
-}
-
-.secondNav p {
-  font-size: 15px!important;
-}
-
-.secondNav a {
-  text-decoration: none;
-  color: black;
-}
-
-.secondNav .col-2:hover {
-  opacity: 0.7;
 }
 
 /* --------------------------------------
@@ -304,6 +279,7 @@ Pre-footer content Styles
 
 .pre-footer .flex {
   display: flex;
+  justify-content: space-around;
 }
 
 .img-link {
@@ -383,7 +359,7 @@ Footer Styles
 
 .main-footer {
   background-color: #38AECC;
-  height: 60vh;
+  height: 525px;
   position: relative;
 }
 
@@ -434,7 +410,7 @@ Footer Styles
 }
 
 .footer-header {
-margin-top: 40px;
+  margin-top: 40px;
 }
 
 .main-footer .svg-above {
@@ -448,6 +424,7 @@ margin-top: 40px;
   left: 0;
   right: 0;
   color: rgba(240, 240, 240, 1);
+  pointer-events: none;
 }
 
 .footer-links {
