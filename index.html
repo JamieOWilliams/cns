@@ -3,6 +3,8 @@
   <head>
     <title>CNS</title>
     <link rel="shortcut icon" type="image/png" href="assets/brand/logo/cns.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,12 +13,36 @@
     <link href="css/normalize.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Cookie consent -->
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000"
+          },
+          "button": {
+            "background": "#f1d600"
+          }
+        },
+        "position": "bottom-left"
+      })});
+    </script>
+
+    <!-- Cookie consent end -->
+
   </head>
   <body>
+
+    <!-- Nav -->
+
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" id="main-nav">
       <a class="navbar-brand my-auto" href="#">
         <img src="assets/brand/logo/cns.png" width="50" height="50" class="d-inline-block align-top" alt="">
-
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,12 +65,24 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item push-right">
-            <span class="skype-button rounded" data-contact-id="cns.call.test"></span>
+            <span>020 8294 3000</span>
+          </li>
+          <li class="nav-item push-right">
+            <span class="skype-button rounded" data-contact-id="cns.call.test" style="color:#FFF;"></span>
             <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
           </li>
         </ul>
       </div>
     </nav>
+
+    <!-- Nav end -->
+
+    <!--
+     HEADER
+    -->
+
+    <!-- Header main -->
+
     <div class="main-header-outer">
       <div class="main-header-inner">
         <img src="assets/img/london2.jpg" class="header-img img-fluid">
@@ -55,11 +93,16 @@
         </div>
       </div>
       <svg class="background-svg" height='36vh' id="canvas-1" preserveaspectratio="none" viewbox="0 0 100 100" width='100%'>
-          <polygon fill="#38AECC" fill-opacity="0.6" id="poly-1" points="0,0 0,0 0,10 30,0"></polygon>
-          <polygon fill="#009DDC" fill-opacity="0.5" id="poly-2" points="0,0 0,0 0,20 20,0"></polygon>
+          <polygon fill="#19194B" fill-opacity="0.6" id="poly-1" points="0,0 0,0 0,10 30,0"></polygon>
+          <polygon fill="#224870" fill-opacity="0.5" id="poly-2" points="0,0 0,0 0,20 20,0"></polygon>
           <polygon fill="#A0ACAD" fill-opacity="0.3" id="poly-3" points="0,0 0,0 0,30 10,0"></polygon>
       </svg>
     </div>
+
+    <!-- Header main end -->
+
+    <!-- Testimonials -->
+
     <div class="testimonial-wrapper-outer pt-3">
       <div class="testimonial-wrapper-inner">
         <div id="carouselTest" class="carousel slide pt-5" data-ride="carousel">
@@ -70,16 +113,16 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item carousel-item-test active">
-              <p class="lead text-center">"We have been working with CNS for 25 years. They have consistantly provided high quality support."</p>
-              <p class="lead text-center mb-5">B &amp; M McHugh</p>
+              <p class="lead text-center">"We have found that CNS have a rare mix of being very professional and competent, whilst also being easy to deal with."</p>
+              <a href="http://www.pyramideng.com/" target="_blank"><p class="lead text-center mb-5 mx-auto">- Pyramid Engineering <i class="fas fa-link" style="font-size: 0.75rem;"></i></p></a>
             </div>
             <div class="carousel-item carousel-item-test">
-              <p class="lead text-center">"We have been working with CNS for 25 years. They have consistantly provided high quality support."</p>
-              <p class="lead text-center mb-5">B &amp; M McHugh</p>
+              <p class="lead text-center">"Limelight Entertainment Ltd has used CNS for around 10 years, it’s been one of the best decisions we’ve made for our business."</p>
+              <a href="http://thelimelightgroup.co.uk/" target="_blank"><p class="lead text-center mb-5 mx-auto">- The Limelight Group <i class="fas fa-link" style="font-size: 0.75rem;"></i></p></a>
             </div>
             <div class="carousel-item carousel-item-test">
-              <p class="lead text-center">"We have been working with CNS for 25 years. They have consistantly provided high quality support."</p>
-              <p class="lead text-center mb-5">B &amp; M McHugh</p>
+              <p class="lead text-center">"CNS are available whenever we need them and have always proved thoroughly competent and professional. We highly value their support, assistance and guidance. "</p>
+              <a href="https://www.belvederes.co.uk/" target="_blank"><p class="lead text-center mb-5 mx-auto">- Belvederes Solicitors <i class="fas fa-link" style="font-size: 0.75rem;"></i></p></a>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselTest" role="button" data-slide="prev">
@@ -118,39 +161,52 @@
       </div>
     </div>
 
+    <!-- Testimonials end  -->
+
+    <!--
+    HEADER END
+   -->
+
+    <!-- 3-column section -->
+
     <div class="content-wrapper-outer">
       <div class="content-wrapper-inner py-5 mt-5">
         <div class="container">
-          <div class="row justify-content-md-center">
+          <div class="row justify-content-between">
             <div class="block col-3" id="0">
-              <img src="assets/img/card-img-1.png" class="block-img mx-auto d-block">
-              <h2 class="display-1 text-center block-heading my-3">Cloud Backup Services</h2>
-              <p class="lead text-center block-text">CNS provides dedicated 24/7 technical support, ensuring IT problems never hinder your business' operations.
+              <img src="assets/img/backup.jpg" class="block-img mx-auto d-block">
+              <h2 class="display-1 block-heading my-3">Cloud Backup Services</h2>
+              <p class="lead block-text">CNS provides dedicated 24/7 technical support, ensuring IT problems never hinder your business' operations.
                                                     We can save your business time, money and elimatie downtime.
                                                     </p>
-              <button type="button" class="mx-auto d-block btn btn-outline-primary mt-4">Discover more</button>
+              <button type="button" class="d-block btn btn-outline-primary mt-4">Discover more</button>
             </div>
             <div class="block col-3" id="1">
-              <img src="assets/img/card-img-2.png" class="block-img mx-auto d-block">
-              <h2 class="display-1 text-center block-heading my-3">Rapid-Restore Backup</h2>
-              <p class="lead text-center block-text">CNS provides dedicated 24/7 technical support, ensuring IT problems never hinder your business' operations.
+              <img src="assets/img/cloud-storage.jpg" class="block-img mx-auto d-block">
+              <h2 class="display-1 block-heading my-3">Rapid-Restore Backup</h2>
+              <p class="lead block-text">CNS provides dedicated 24/7 technical support, ensuring IT problems never hinder your business' operations.
                                                     We can save your business time, money and elimatie downtime.
                                                     </p>
-              <button type="button" class="mx-auto d-block btn btn-outline-primary mt-4">Discover more</button>
+              <button type="button" class="d-block btn btn-outline-primary mt-4">Discover more</button>
             </div>
             <div class="block col-3" id="2">
-              <img src="assets/img/card-img-3.png" class="block-img mx-auto d-block">
-              <h2 class="display-1 text-center block-heading my-3">Affordable Pricing</h2>
-              <p class="lead text-center block-text">CNS provides dedicated 24/7 technical support, ensuring IT problems never hinder your business' operations.
+              <img src="assets/img/pricing.jpg" class="block-img mx-auto d-block">
+              <h2 class="display-1 block-heading my-3">Affordable Pricing</h2>
+              <p class="lead block-text">CNS provides dedicated 24/7 technical support, ensuring IT problems never hinder your business' operations.
                                                     We can save your business time, money and elimatie downtime.
                                                     </p>
-              <button type="button" class="mx-auto d-block btn btn-outline-primary mt-4">Discover more</button>
+              <button type="button" class="d-block btn btn-outline-primary mt-4">Discover more</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="carouselHome" class="carousel slide py-5" data-ride="carousel">
+
+    <!-- 3-column section end -->
+
+    <!-- Large carousel section -->
+
+    <!-- <div id="carouselHome" class="carousel slide py-5" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
         <li data-target="#carouselHome" data-slide-to="1"></li>
@@ -183,9 +239,50 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
-    <div class="tertiary-content-outer">
+    </div> -->
 
+    <!-- Large carousel section end -->
+
+    <!-- Large box section -->
+
+    <div class="tertiary-outer">
+      <div class="container tertiary-content">
+        <div class="row">
+          <div class="col-6">
+            <h2 class="display-3 mb-4">What is the Cloud and how can it help your business?</h3>
+            <hr class="tertiary-divider">
+            <p class="lead ">The Big Cloud was launched in August 2009 to meet the modern needs of growing firms throughout the UK. Computer Network Services have a long history of providing innovative and cost effective IT solutions within the business sector including web based systems.
+                                        <br><br>Historically businesses had to plan their growth accurately and invest in the necessary IT facilities to accommodate this growth. This has always been a little difficult but in the current climate it is proving impossible to predict what is ahead or even to raise the capital for IT infrastructure.</p>
+          </div>
+          <div class="col-6">
+            <img src="assets/img/cloud.jpg" class="img-fluid my-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quaternary-outer my-5 py-5">
+      <div class="container quaternary-content">
+        <div class="row justify-content-between">
+
+          <div class="col-5 pl-0">
+            <img src="assets/img/365-phone.jpg" class="pt-5 img-fluid my-auto">
+          </div>
+          <div class="col-7">
+            <h2 class="display-3  mt-5 mb-4">How can Office 365 help your business?</h3>
+            <hr>
+            <p class="lead ">The Big Cloud was launched in August 2009 to meet the modern needs of growing firms throughout the UK. Computer Network Services have a long history of providing innovative and cost effective IT solutions within the business sector including web based systems.
+                                        <br><br>Historically businesses had to plan their growth accurately and invest in the necessary IT facilities to accommodate this growth. This has always been a little difficult but in the current climate it is proving impossible to predict what is ahead or even to raise the capital for IT infrastructure.</p>
+                <img src="assets/img/365.png" class="pt-3 my-auto d-block three-six-five">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- <div class="tertiary-content-outer">
       <div class="tertiary-content-inner container">
         <div class="row justify-content-between">
           <div class="text-block-left col-6 my-5">
@@ -197,7 +294,12 @@
           <img src="assets/img/cloud_user.jpg" class=" col-5 img-fluid my-auto">
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <!-- Large box section end -->
+
+    <!-- Map section -->
+
     <div class="location-home map-outer mt-5" style="">
       <svg class="map-svg" id="" preserveaspectratio="none" viewbox="0 0 100 100">
           <polygon fill="rgb(210,210,210)" fill-opacity="0.8" points="50,0 0,0 0,100 40,100"></polygon>
@@ -264,229 +366,17 @@
         </div>
       </div>
     </div>
-    <div class="pre-footer">
-      <div class="flex">
-        <div class="container-img img-link-left">
-          <a href="#">
-          <img src="assets/img/get_quote.jpeg" alt="Avatar" class="image" style="width:100%">
-          <div class="middle">
-            <div class="text">Contact us for a quotation</div>
-          </div>
-          </a>
-        </div>
-        <div class="container-img img-link-right">
-          <a href="#">
-          <img src="assets/img/get_idea.jpeg" alt="Avatar" class="image" style="width:100%">
-          <div class="middle">
-            <div class="text">How can we help your business?</div>
-          </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-header">
-    <div class="partners-wrapper-footer mt-3 mx-auto">
-      <div class="container">
-        <div class="row">
-          <div class="col-2 my-auto">
-            <img src="assets/partners/dell.png" class="img-fluid partners-img d-block m-auto d-block" width="50%">
-          </div>
-          <div class="col-2 my-auto">
-            <img src="assets/partners/cisco.png" class="img-fluid partners-img d-block m-auto d-block" width="60%">
-          </div>
-          <div class="col-2 my-auto">
-            <img src="assets/partners/hp.png" class="img-fluid partners-img m-auto d-block" width="50%">
-          </div>
-          <div class="col-2 my-auto">
-            <img src="assets/partners/vmware.png" class="img-fluid partners-img m-auto d-block" width="80%">
-          </div>
-          <div class="col-2 my-auto">
-            <img src="assets/partners/microsoft.png" class="img-fluid partners-img m-auto d-block" width="80%">
-          </div>
-          <div class="col-2 my-auto">
-            <img src="assets/partners/citrix.png" class="img-fluid partners-img m-auto d-block" width="80%">
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <footer class="main-footer">
-      <svg class="background-svg svg-above" height='525px' id="canvas-1" preserveaspectratio="none" viewbox="0 0 100 100" width='50%'>
-          <polygon fill="rgba(250, 250, 250, 1)" fill-opacity="1" id="poly-1" points="100,0 100,100 35,100 10,0"></polygon>
-      </svg>
-      <div class="footer-links container">
-        <div class="row justify-content-start">
-          <div class="col-1 spacer">
-          </div>
-          <div class="footer-contact col-3">
-            <?php
 
-            function test_input($data) {
-              $data = trim($data);
-              $data = stripslashes($data);
-              $data = htmlspecialchars($data);
-              return $data;
-            }
+    <!-- Map section end -->
 
-            // Define variables
-            $name = $email = $message = "";
-            $nameErr = $emailErr = $messageErr = "";
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    <!-- Footer -->
 
 
-              // Get info from form
-              if (empty($_POST['name'])) {
-                $nameErr = "Name is required.";
-              } else {
-                $name = test_input($_POST['name']);
-                if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
-                  $nameErr = "Only letters and white space allowed.";
-                }
-              }
 
-              if (empty($_POST['email'])) {
-                $emailErr = "Please enter your email so we can get back to you.";
-              } else {
-                $email = test_input($_POST['email']);
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                  $emailErr = "Invalid email format.";
-                }
-              }
+    <!-- Footer end -->
 
-              if (empty($_POST['message'])) {
-                $messageErr = "Please enter a short message.";
-              } else {
-                $message = test_input($_POST['message']);
-              }
 
-              // Set content-type headers
-              $headers = "MIME-Version: 1.0" . "\r\n";
-              $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-              // Send email to CNS
-              $email_CNS = "robertw@cnsuk.com";
-              $subject_CNS = "Email from $name";
-              $message_CNS = "
-              <html>
-              <head>
-              <title>Message from cnsuk.com</title>
-              <style>
-                th {
-                  margin-right: 10px;
-                }
-                td {
-                  margin-right: 10px;
-                }
-              </style>
-              </head>
-              <body>
-              <table>
-              <tr>
-              <th>Name</th>
-              <th>Email</th>
-              </tr>
-              <tr>
-              <td>$name</td>
-              <td>$email</td>
-              </tr>
-              </table>
-              <p>This person has submitted the message: '$message'</p>
-              </body>
-              </html>
-              ";
-
-              mail($email_CNS, $subject_CNS, $message_CNS, $headers);
-
-              // Send email to user
-              $subject_user = "Message Confirmation (CNS)";
-              $message_user = "
-              <html>
-              <head>
-              <title>Message Confirmation From CNS</title>
-              </head>
-              <body>
-              <p>Dear $name,</p>
-              <br>
-              <p>Thank you for contacting us. We will get back to you as soon as possible.</p>
-              <br>
-              <p>Warm Regards</p>
-              <br>
-              <p>Computer Network Services</p>
-              </body>
-              </html>
-              ";
-
-              mail($email, $subject_user, $message_user, $headers);
-
-            }
-
-            ?>
-            <h2 class="display-1">Contact Us</h2>
-            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-              <div class="form-group">
-                <label for="exampleFormControlInput1">Name</label>
-                <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="Name">
-                <span class="error"><?php echo $nameErr;?></span>
-                <br>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
-                <span class="error"><?php echo $emailErr;?></span>
-                <br>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">Message</label>
-                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
-                <span class="error"><?php echo $messageErr;?></span>
-                <br>
-              </div>
-              <input type="submit" value="Submit" class="btn btn-light btn-submit">
-            </form>
-
-          </div>
-          <div class="footer-links col-2 pt-0 pl-5">
-            <h2 class="display-1">Useful links</h2>
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active pl-0" href="#">Back to top</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-0" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-0" href="#">Solutions</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-0" href="#">Cloud Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pl-0" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-2 spacer">
-          </div>
-          <div class="col-4 tvd">
-            <h2 class="display-1"><span><img src="assets/support/teamviewer/logo/logo-sm.png" width="60px;" class="img-fluid mr-3"></span>Download Teamviewer 12</h2>
-            <div class="download pt-4 my-2">
-              <a class="lead" href="https://www.teamviewer.com/en/download/windows/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for Windows</h3></a>
-            </div>
-            <div class="download">
-              <a class="lead" href="https://www.teamviewer.com/en/download/mac/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for MacOS</h3></a>
-            </div>
-            <div class="download my-2">
-              <a class="lead" href="https://www.teamviewer.com/en/download/linux/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for Linux</h3></a>
-            </div>
-            <div class="download">
-              <a class="lead" href="https://www.teamviewer.com/en/download/chrome-os/"><span><img src="https://png.icons8.com/downloads/dotty/80" title="Download" width="25" height="25" class="mr-2"></span>Download for ChromeOS</h3></a>
-            </div>
-          </div>
-        </div>
-        <p class="lead copy-right-text text-center">&copy; Computer Network Services 2017</p>
-      </div>
-    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

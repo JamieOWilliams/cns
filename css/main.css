@@ -4,6 +4,10 @@
   right: 0;
 }*/
 
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
 /* --------------------------------------
 Header Styles
 -------------------------------------- */
@@ -20,7 +24,7 @@ Header Styles
 .main-header-inner {
   position: relative;
   height: 50vh;
-  background: linear-gradient(90deg, #38AECC 30%, transparent 90%);
+  background: linear-gradient(90deg, #19194B 0%, transparent 90%);
 }
 
 .header-title {
@@ -51,6 +55,10 @@ Header Styles
   top: 190px;
   left: 40px;
   position: absolute;
+}
+
+.skype-button a {
+  background-color: #224870;
 }
 
 /* --------------------------------------
@@ -106,13 +114,14 @@ Column block Styles
 }
 
 .block-img {
-  width: 120px;
-  height: 120px;
+  width: 400px;
+  height: auto;
   margin-bottom: 10px;
 }
 
 .block-text {
   color: #A0ACAD;
+  font-size: 1rem!important;
 }
 
 .vid-block {
@@ -214,32 +223,55 @@ Secondary content Styles
   color: rgba(0,0,0,0.6);
 }
 
-.tertiary-content-outer {
-  margin-top: 40px;
-  margin-bottom: 150px;
-  background-color: rgba(240, 240, 240, 0.5);
-  width: 80%;
+.tertiary-outer {
+  background-color: #19194B;
+  max-width: 100%!important;
+}
+
+.tertiary-content,
+.quaternary-content {
+  max-width: 80%!important;
+}
+
+.tertiary-content h2,
+.quaternary-content h2 {
+  font-size: 1.8rem !important;
+}
+
+.tertiary-content h2 {
+  color: #FFF;
+  margin-top: 125px;
+}
+
+.tertiary-content p {
+  color: rgba(255,255,255,0.8);
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+.quaternary-content p {
+  color: rgba(0,0,0,0.8);
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+.three-six-five {
+  width: 50%;
+  height: auto;
   margin: 0 auto;
-  padding: 40px 0;
 }
 
-.tertiary-content-inner {
-  margin: auto;
-}
-
-.tertiary-content-inner h2 {
-  font-size: 3rem !important;
-}
-
-.tertiary-content-inner img {
- margin: 0;
- padding: 0;
- width: 200px;
- height: 300px;
+.tertiary-content img {
+  width: 100%;
+  height: auto;
 }
 
 .tertiary-content-img {
   margin: 0 auto;
+}
+
+.tertiary-divider {
+  border-color: white;
 }
 
 .img-back {
@@ -489,7 +521,7 @@ Footer Styles
 
 #carouselHome {
   width: 80%;
-  margin: 40px auto;
+  margin: 40px auto 0 auto;
   max-width: 100%!important;
 }
 
