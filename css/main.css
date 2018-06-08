@@ -4,10 +4,15 @@
   right: 0;
 }*/
 
-* {
-  font-family: 'Nanum Gothic', sans-serif;
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../assets/fonts/SegoeUI.tff');
+    src: url('../assets/fonts/SegoeUI.woff');
 }
 
+* {
+  font-family: 'SegoeUI', sans-serif;
+}
 /* --------------------------------------
 Header Styles
 -------------------------------------- */
@@ -57,13 +62,71 @@ Header Styles
   position: absolute;
 }
 
+.skype-button {
+  background-color: rgba(0,0,0,0.5);
+  font-size: 0.65rem!important;
+  padding: 10px!important;
+}
+
+.skype-button:hover {
+  background-color: #19194B;
+
+}
+
 .skype-button a {
   background-color: #224870;
+}
+
+@media (max-width: 1600px) {
+  .header-img {
+    bottom: 0px;
+  }
+
+  .main-header-inner {
+    height: 35vh;
+  }
+
+  .main-header-outer {
+    height: 35vh;
+  }
+
+  .header-title {
+    font-size: 3rem!important;
+    top: 20px;
+  }
+
+  .header-subtitle {
+    top: 80px;
+  }
+
+  .header-btn {
+    top: 100px;
+  }
+
+  .background-svg {
+    height: 21vh;
+  }
+}
+
+.phone {
+  padding: 8px;
+}
+
+@media (max-width: 800px) {
+  .header-img {
+    /* height: 100%!important; */
+    left: 0px;
+  }
 }
 
 /* --------------------------------------
 Testimonial Styles
 -------------------------------------- */
+
+.background-svg {
+  position: absolute;
+  height: 36vh;
+}
 
 .testimonial-wrapper-outer {
   height: calc(30vh + 90px);
@@ -72,7 +135,7 @@ Testimonial Styles
 }
 
 .testimonial-wrapper-inner {
-
+  position: relative;
 }
 
 .carousel-item-test p {
@@ -114,7 +177,7 @@ Column block Styles
 }
 
 .block-img {
-  width: 400px;
+  width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
@@ -240,7 +303,7 @@ Secondary content Styles
 
 .tertiary-content h2 {
   color: #FFF;
-  margin-top: 125px;
+  margin-top: 15%;
 }
 
 .tertiary-content p {
@@ -343,6 +406,35 @@ Pre-footer content Styles
 }
 
 /* --------------------------------------
+Map Styles
+-------------------------------------- */
+
+.locations-wrapper-contact {
+  background-color: rgba(240, 240, 240, 1);
+  padding: 20px 0;
+}
+
+.loc-cont {
+  z-index: 1000;
+}
+
+.loc-list {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.loc-list-item {
+  color: rgba(0,0,0, 0.6);
+  margin: 5px 0;
+  font-size: 1rem!important;
+  transition: all 0.3s;
+}
+
+.loc-list-item:hover {
+  color: rgba(0,0,0, 1);
+}
+
+/* --------------------------------------
 Pre-footer image Styles
 -------------------------------------- */
 
@@ -390,123 +482,26 @@ Footer Styles
 -------------------------------------- */
 
 .main-footer {
-  background-color: #38AECC;
-  height: 525px;
-  position: relative;
+  height: 25vh;
+  background-color: #19194B;
 }
 
-.footer-links {
-  padding-top: 60px;
-  max-width: 100vw!important;
+.footer-links-header {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1rem;
+  padding-left: 40px;
 }
 
-.footer-links h2 {
-  font-size: 2rem;
-  color: white;
+.footer-links li {
+  margin: 10px 0px;
 }
 
-.footer-links a,
-.footer-links label {
-  color: rgba(240, 240, 240, 1);
+.footer-links li a {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.partners-wrapper-footer {
-  background-color: rgba(240, 240, 240, 1);
-  height: 100%;
-  padding: 30px 0;
-}
-
-.locations-wrapper-contact {
-  background-color: rgba(240, 240, 240, 1);
-  padding: 20px 0;
-}
-
-.loc-cont {
-  z-index: 1000;
-}
-
-.loc-list {
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.loc-list-item {
-  color: rgba(0,0,0, 0.6);
-  margin: 5px 0;
-  font-size: 1rem!important;
-  transition: all 0.3s;
-}
-
-.loc-list-item:hover {
-  color: rgba(0,0,0, 1);
-}
-
-.footer-header {
-  margin-top: 40px;
-}
-
-.main-footer .svg-above {
-  left: 50%;
-}
-
-.main-footer p {
-  padding-top: 20px;
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  color: rgba(240, 240, 240, 1);
-  pointer-events: none;
-}
-
-.footer-links {
-
-}
-
-.footer-nav {
-  right: 0;
-  left: 0;
-  position: absolute;
-  bottom: 50px;
-}
-
-.footer-nav li {
-  margin: 10px 0;
-}
-
-.footer-nav a {
-  color: white;
-  /*border: 1px solid white;
-  border-radius: 5px;*/
-  margin: 0 auto;
-  transition: all 0.3s;
-}
-
-.footer-nav a:hover {
-  color: rgba(255, 255, 255, 0.5)
-}
-
-.tvd {
-  z-index: 100;
-}
-
-.tvd p {
-  margin: 0;
-}
-
-.tvd a {
-  color: #38AECC;
-  transition: all 0.5s;
-}
-
-.tvd a:hover {
-  color: #38AECC;
-  opacity: 0.5;
-}
-
-.tvd h3,
-.tvd h2 {
-  color: #38AECC;
+.footer-links li a:hover {
+  color: rgba(255, 255, 255, 1)
 }
 
 /* ID Styles */
